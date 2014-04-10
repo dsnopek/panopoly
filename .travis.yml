@@ -19,7 +19,7 @@ env:
 install:
   - sudo apt-get update > /dev/null
   - "mysql -e 'create database drupal;'"
-  - composer.phar self-update
+  - /home/travis/.phpenv/versions/5.4.25/bin/composer.phar self-update
 
   # Install the latest Drush 6.
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
