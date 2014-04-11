@@ -43,7 +43,7 @@ Feature: Use rich text editor
       | Align Full      | p       | text-align      | justify   |
       | Increase Indent | p       | padding-left    | 30px      |
 
-  @api @javascript
+  @api @javascript @chrome
   Scenario: Add an image with format and alt text
     When I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
     # Upload the file.
