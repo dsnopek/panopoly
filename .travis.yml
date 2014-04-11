@@ -28,6 +28,7 @@ install:
   - unzip -a chromedriver_linux64.zip
   - google-chrome &
   - ./chromedriver &
+  - sleep 90
   - exit 1
 
   # Create a database for our Drupal site.
