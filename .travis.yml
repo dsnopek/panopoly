@@ -17,7 +17,12 @@ env:
 #  - UPGRADE=7.x-1.0-rc3
 
 install:
+  # Add the Google Chrome packages.
+  - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   - sudo apt-get update > /dev/null
+
+  # Create a database for our Drupal site.
   - "mysql -e 'create database drupal;'"
 
   # Install the latest Drush 6.
@@ -56,9 +61,14 @@ install:
   - sh -e /etc/init.d/xvfb start
   - sleep 5
 
+  # Get Chrome and ChromeDriver
+  - sudo apt-get install google-chrome-stable
+  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
+  - unzip -a chromedriver_linux64.zip
+
   # Get Selenium
-  - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar
-  - java -jar selenium-server-standalone-2.37.0.jar > /dev/null 2>&1 &
+  - wget http://selenium.googlecode.com/files/selenium-server-standalone-2.41.0.jar
+  - java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=./chromedriver > /dev/null 2>&1 &
   - sleep 5
  
   # Disable sendmail
@@ -90,7 +100,11 @@ before_script:
 
 script:
 
-  - ./bin/behat --config behat.travis.yml
+  # First, run all the tests in Firefox.
+  #- ./bin/behat --config behat.travis.yml
+
+  # Then run some Chrome-only tests.
+  - ./bin/behat --config behat.travis.yml -p chrome
 
 #notifications:
 #  email:
