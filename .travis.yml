@@ -69,7 +69,7 @@ install:
   # Get Selenium
   - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
   #- java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=./chromedriver > /dev/null 2>&1 &
-  - java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=./chromedriver &
+  - java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver &
   - sleep 5
  
   # Disable sendmail
