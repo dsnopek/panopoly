@@ -22,14 +22,6 @@ install:
   - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   - sudo apt-get update > /dev/null
 
-  # Make sure we can run chrome
-  - sudo apt-get install google-chrome-stable
-  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
-  - unzip -a chromedriver_linux64.zip
-  - google-chrome &
-  - chromedriver &
-  - exit 1
-
   # Create a database for our Drupal site.
   - "mysql -e 'create database drupal;'"
 
