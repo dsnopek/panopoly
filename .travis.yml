@@ -96,9 +96,11 @@ script:
 
 after_script:
 
+  - ps aux | grep drush
   - echo $SERVER_PID
   # Stop the webserver so that it's not still running when MySQL is stopped.
   - kill $SERVER_PID
+  - ps aux | grep drush
 
 #notifications:
 #  email:
