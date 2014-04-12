@@ -91,16 +91,12 @@ before_script:
 
 script:
 
-  #- ./bin/behat --config behat.travis.yml
-  - true
+  - ./bin/behat --config behat.travis.yml
 
 after_script:
 
-  - ps aux | grep drush
-  - echo $SERVER_PID
   # Stop the webserver so that it's not still running when MySQL is stopped.
   - kill $SERVER_PID
-  - ps aux | grep drush
 
 #notifications:
 #  email:
