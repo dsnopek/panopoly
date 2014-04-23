@@ -64,3 +64,5 @@ projects[panopoly_search][subdir] = panopoly
 projects[panopoly_search][download][type] = git
 projects[panopoly_search][download][revision] = f7e1fa2
 projects[panopoly_search][download][branch] = 7.x-1.x
+projects[panopoly_search][patch][xxx] = https://gist.githubusercontent.com/dsnopek/11217003/raw/f6d4d6c9a6ff9912f45eec2a70f34ba9837d2d05/panopoly_search.patch
+
