@@ -29,6 +29,7 @@ install:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - composer global require --prefer-source --no-interaction drush/drush:6.*
   - drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
+  - drush cc drush
 
   # Build Behat dependencies
   - cd ./tests/behat
