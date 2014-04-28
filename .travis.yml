@@ -28,6 +28,7 @@ install:
   # Install the latest Drush 6.
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - composer global require --prefer-source --no-interaction drush/drush:6.*
+  - drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
 
   # Build Behat dependencies
   - cd ./tests/behat
@@ -103,7 +104,6 @@ before_script:
   - drush runserver --server=builtin 8888 > /dev/null 2>&1 &
   - SERVER_PID=$!
   - sleep 3
-  - cd profiles/panopoly/tests/behat
 
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
   - BUILD_OWNER=`dirname $TRAVIS_BUILD_DIR`
@@ -111,9 +111,15 @@ before_script:
 
 script:
 
+  # Verify that all the .make files will work on Drupal.org.
+  - drush verify-makefile drupal-org.make
+  - find modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile \{\} \;
+
+  - cd profiles/panopoly/tests/behat
+
   # First, run all the tests in Firefox.
   - ./bin/behat --config behat.travis.yml
- 
+
   # Then run some Chrome-only tests.
   - ./bin/behat --config behat.travis.yml -p chrome
 
