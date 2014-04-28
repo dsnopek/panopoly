@@ -54,7 +54,7 @@ install:
 
   # Verify that all the .make files will work on Drupal.org.
   - drush verify-makefile drupal/profiles/panopoly/drupal-org.make
-  - find drupal/profiles/panopoly/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile \{\} \;
+  - find drupal/profiles/panopoly/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile
 
   # Download an old version to test upgrading from.
   - if [[ "$UPGRADE" != none ]]; then drush dl panopoly-$UPGRADE; fi
