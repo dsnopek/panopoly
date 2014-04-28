@@ -41,7 +41,7 @@ install:
   - mkdir drupal
   - mv profiles drupal/
 
-  # Test the current branch
+  # Build the current branch.
   - cd drupal
   - drush make --yes profiles/panopoly/drupal-org-core.make --prepare-install
   - drush make --yes profiles/panopoly/drupal-org.make --no-core --contrib-destination=profiles/panopoly
@@ -50,6 +50,10 @@ install:
   - mkdir sites/default/private/files
   - mkdir sites/default/private/temp
   - cd ../
+
+  # Verify that all the .make files will work on Drupal.org.
+  - drush verify-makefile drupal/profiles/panopoly/drupal-org.make
+  - find drupal/profiles/panopoly/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile \{\} \;
 
   # Download an old version to test upgrading from.
   - if [[ "$UPGRADE" != none ]]; then drush dl panopoly-$UPGRADE; fi
@@ -104,18 +108,13 @@ before_script:
   - drush runserver --server=builtin 8888 > /dev/null 2>&1 &
   - SERVER_PID=$!
   - sleep 3
+  - cd profiles/panopoly/tests/behat
 
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
   - BUILD_OWNER=`dirname $TRAVIS_BUILD_DIR`
   - export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_OWNER/drupal"
 
 script:
-
-  # Verify that all the .make files will work on Drupal.org.
-  - drush verify-makefile drupal-org.make
-  - find modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile \{\} \;
-
-  - cd profiles/panopoly/tests/behat
 
   # First, run all the tests in Firefox.
   - ./bin/behat --config behat.travis.yml
