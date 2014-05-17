@@ -8,6 +8,7 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 22c44a8
 projects[panopoly_core][download][branch] = 7.x-1.x
+projects[panopoly_core][patch][xxx] = https://gist.githubusercontent.com/dsnopek/5d04210d9a154d1d828a/raw/06afd2dd8fd93b53a58647c30f5dd5834f5cfe97/2239847.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
