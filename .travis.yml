@@ -9,12 +9,12 @@ mysql:
   encoding: utf8
 
 env:
-  - UPGRADE=none
-  - UPGRADE=7.x-1.2
-  - UPGRADE=7.x-1.1
-  - UPGRADE=7.x-1.0-rc5
+#  - UPGRADE=none
+#  - UPGRADE=7.x-1.2
+#  - UPGRADE=7.x-1.1
+#  - UPGRADE=7.x-1.0-rc5
   - UPGRADE=7.x-1.0-rc4
-  - UPGRADE=7.x-1.0-rc3
+#  - UPGRADE=7.x-1.0-rc3
 
 install:
   # Add the Google Chrome packages.
@@ -122,14 +122,14 @@ after_script:
   # Stop the webserver so that it's not still running when MySQL is stopped.
   - kill $SERVER_PID
 
-notifications:
-  email:
-    recipients:
-      - panopoly-ci@googlegroups.com
-    on_success: always
-    on_failure: always
-  irc:
-    channels:
-      - "chat.freenode.net#panopoly"
-    on_success: always
-    on_failure: always
+#notifications:
+#  email:
+#    recipients:
+#      - panopoly-ci@googlegroups.com
+#    on_success: always
+#    on_failure: always
+#  irc:
+#    channels:
+#      - "chat.freenode.net#panopoly"
+#    on_success: always
+#    on_failure: always
