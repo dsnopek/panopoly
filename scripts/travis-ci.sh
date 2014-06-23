@@ -1,32 +1,10 @@
 #!/bin/bash
 
-$COMMAND=$1
+COMMAND=$1
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export DISPLAY=:99.0
 export CHROME_SANDBOX=/opt/google/chrome/chrome-sandbox
-
-case $1 in
-  system-install)
-    system_install
-    ;;
-
-  drupal-install)
-    drupal_install
-    ;;
-
-  before-tests)
-    before_tests
-    ;;
-
-  run-tests)
-    run_tests
-    ;;
-
-  after-tests)
-    after_tests
-    ;;
-esac
 
 # system-install
 #
@@ -148,10 +126,34 @@ run_tests() {
 }
 
 after_tests() {
-  WEB_SERVER_PID=`echo /tmp/webserver-server-pid`
-  SELENIUM_SERVER_PID=`echo /tmp/selenium-server-pid`
+  WEB_SERVER_PID=`cat /tmp/webserver-server-pid`
+  SELENIUM_SERVER_PID=`cat /tmp/selenium-server-pid`
 
   # Stop the servers we started
   kill $WEB_SERVER_PID
   kill $SELENIUM_SERVER_PID
 }
+
+case $COMMAND in
+  system-install)
+    system_install
+    ;;
+
+  drupal-install)
+    drupal_install
+    ;;
+
+  before-tests)
+    before_tests
+    ;;
+
+  run-tests)
+    run_tests
+    ;;
+
+  after-tests)
+    after_tests
+    ;;
+esac
+
+
