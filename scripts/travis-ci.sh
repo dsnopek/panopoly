@@ -113,7 +113,7 @@ run_tests() {
   BUILD_OWNER=`dirname $TRAVIS_BUILD_DIR`
   export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_OWNER/drupal"
 
-  cd drupal/profiles/panopoly/tests/behat
+  cd profiles/panopoly/tests/behat
 
   # If this isn't an upgrade, we test if any features are overridden.
   if [[ "$UPGRADE" == none ]]; then ../../scripts/check-overridden.sh; fi
