@@ -133,6 +133,9 @@ script:
   # First, run all the tests in Firefox.
   - ./bin/behat --config behat.travis.yml
 
+  # Will this help?
+  - drush cc all
+
   # Then run some Chrome-only tests.
   - ./bin/behat --config behat.travis.yml -p chrome
 
