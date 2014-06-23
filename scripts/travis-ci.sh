@@ -28,7 +28,7 @@ system_install() {
   # Build Behat dependencies
   cd panopoly/tests/behat
   composer install --prefer-source --no-interaction
-  cd ../../../../
+  cd ../../..
 
   # Build Codebase
   mkdir profiles
