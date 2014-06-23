@@ -28,7 +28,7 @@ install:
   - export UPDATE TRAVIS_BUILD_DIR
   - cp scripts/travis-ci.sh $HOME/
   - $HOME/travis-ci.sh system-install
-  - cd $HOME
+  - cd ..
 
 before_script:
   - $HOME/travis-ci.sh before-tests
