@@ -1,6 +1,7 @@
 #!/bin/bash
 
 COMMAND=$1
+BUILD_TOP=`dirname $TRAVIS_BUILD_DIR`
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export DISPLAY=:99.0
@@ -102,6 +103,8 @@ before_tests() {
   echo $! > /tmp/web-server-pid
   sleep 3
 
+  cd ..
+
   # Run the selenium server
   java -jar selenium-server-standalone-2.41.0.jar -Dwebdriver.chrome.driver=`pwd`/chromedriver > /dev/null 2>&1 &
   echo $! > /tmp/selenium-server-pid
@@ -110,7 +113,6 @@ before_tests() {
 
 run_tests() {
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
-  BUILD_OWNER=`dirname $TRAVIS_BUILD_DIR`
   export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_OWNER/drupal"
 
   cd drupal/profiles/panopoly/tests/behat
@@ -133,6 +135,9 @@ after_tests() {
   kill $WEB_SERVER_PID
   kill $SELENIUM_SERVER_PID
 }
+
+# We want to always start from the same directory:
+cd $BUILD_TOP
 
 case $COMMAND in
   system-install)

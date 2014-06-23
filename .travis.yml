@@ -31,10 +31,6 @@ install:
   # Copy the script into a stable location.
   - cp scripts/travis-ci.sh $HOME/
 
-  # Move to the directory which contains 'panopoly'. This is the consitent
-  # directory that we will run travis-ci.sh from.
-  - cd ..
-
   # Start by doing system installation.
   - $HOME/travis-ci.sh system-install
 
