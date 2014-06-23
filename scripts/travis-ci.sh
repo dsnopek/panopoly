@@ -25,9 +25,9 @@ system_install() {
   drush cc drush
 
   # Build Behat dependencies
-  cd ./tests/behat
+  cd panopoly/tests/behat
   composer install --prefer-source --no-interaction
-  cd ../../../
+  cd ../../../../
 
   # Build Codebase
   mkdir profiles

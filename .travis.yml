@@ -25,10 +25,18 @@ matrix:
     - env: UPGRADE=7.x-1.0-rc3
 
 install:
+  # Make some variables available to the travis-ci.sh script.
   - export UPDATE TRAVIS_BUILD_DIR
+
+  # Copy the script into a stable location.
   - cp scripts/travis-ci.sh $HOME/
-  - $HOME/travis-ci.sh system-install
+
+  # Move to the directory which contains 'panopoly'. This is the consitent
+  # directory that we will run travis-ci.sh from.
   - cd ..
+
+  # Start by doing system installation.
+  - $HOME/travis-ci.sh system-install
 
 before_script:
   - $HOME/travis-ci.sh before-tests
