@@ -21,6 +21,8 @@ env:
 
 matrix:
   fast_finish: true
+  allow_failures:
+    - env: UPGRADE=7.x-1.0-rc3
 
 install:
   # Add the Google Chrome packages.
@@ -53,6 +55,7 @@ install:
   - drush make --yes profiles/panopoly/drupal-org-core.make --prepare-install
   - drush make --yes profiles/panopoly/drupal-org.make --no-core --contrib-destination=profiles/panopoly
   - drush dl panopoly_demo-1.x-dev
+  - drush dl diff
   - mkdir sites/default/private
   - mkdir sites/default/private/files
   - mkdir sites/default/private/temp
@@ -111,7 +114,7 @@ before_script:
   - cd ../drupal
 
   # If we're an upgrade test, run the upgrade process.
-  - if [[ "$UPGRADE" != none ]]; then cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; fi
+  - if [[ "$UPGRADE" != none ]]; then cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; drush cc all; fi
 
   - drush runserver --server=builtin 8888 > /dev/null 2>&1 &
   - SERVER_PID=$!
@@ -123,6 +126,9 @@ before_script:
   - export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_OWNER/drupal"
 
 script:
+
+  # If this isn't an upgrade, we test if any features are overridden.
+  - if [[ "$UPGRADE" == none ]]; then ../../scripts/check-overridden.sh; fi
 
   # First, run all the tests in Firefox.
   - ./bin/behat --config behat.travis.yml
