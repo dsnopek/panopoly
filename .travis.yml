@@ -34,6 +34,10 @@ before_script:
   - $HOME/travis-ci.sh before-tests
 
 script:
+  - pwd
+  - ls
+  - echo $TRAVIS_BUILD_DIR
+  - ls $TRAVIS_BUILD_DIR
   - $HOME/travis-ci.sh run-tests
 
 after_script:
