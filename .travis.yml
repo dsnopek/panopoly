@@ -27,17 +27,16 @@ matrix:
 install:
   - export UPDATE TRAVIS_BUILD_DIR
   - cp scripts/travis-ci.sh $HOME/
-  - cd $HOME
-  - ./travis-ci.sh system-install
+  - $HOME/travis-ci.sh system-install
 
 before_script:
-  - ./travis-ci.sh before-tests
+  - $HOME/travis-ci.sh before-tests
 
 script:
-  - ./travis-ci.sh run-tests
+  - $HOME/travis-ci.sh run-tests
 
 after_script:
-  - ./travis-ci.sh after-tests
+  - $HOME/travis-ci.sh after-tests
 
 #notifications:
 #  email:
