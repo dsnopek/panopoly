@@ -17,7 +17,7 @@ system_install() {
   sudo apt-get update > /dev/null
 
   # Create a database for our Drupal site.
-  "mysql -e 'create database drupal;'"
+  mysql -e 'create database drupal;'
 
   # Install the latest Drush 6.
   composer global require --prefer-source --no-interaction drush/drush:6.*

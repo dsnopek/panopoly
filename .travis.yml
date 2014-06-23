@@ -25,9 +25,7 @@ matrix:
     - env: UPGRADE=7.x-1.0-rc3
 
 install:
-  - export PATH UPDATE TRAVIS_BUILD_DIR
-  - echo $PATH
-  - which mysql
+  - export UPDATE TRAVIS_BUILD_DIR
   - cp scripts/travis-ci.sh $HOME/
   - $HOME/travis-ci.sh system-install
 
