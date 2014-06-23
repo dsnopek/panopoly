@@ -10,7 +10,11 @@ Feature: Use rich text editor
         | Title                | Testing WYSIWYG       |
         | body[und][0][format] | panopoly_wysiwyg_text |
 
-  @api @javascript @chrome
+  @api
+  Scenario: Add a content page
+    When I press "Publish"
+
+  @api @javascript
   Scenario Outline: Format text in the editor (first toolbar)
     When I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
       And I type "Testing body" in the "edit-body-und-0-value" WYSIWYG editor
@@ -29,7 +33,7 @@ Feature: Use rich text editor
       | Align Center                  | p          | text-align      | center       |
       | Align Right                   | p          | text-align      | right        |
 
-  @api @javascript @chrome
+  @api @javascript
   Scenario Outline: Format text in the editor (advanced toolbar)
     When I expand the toolbar in the "edit-body-und-0-value" WYSIWYG editor
       And I click the "<Action>" button in the "edit-body-und-0-value" WYSIWYG editor
