@@ -10,8 +10,10 @@ Feature: Use rich text editor
         | Title                | Testing WYSIWYG       |
         | body[und][0][format] | panopoly_wysiwyg_text |
 
+  # For some inexplicable reason this is necessary on Travis-CI. Without it,
+  # the first test always fails: it can't find the "Bryant Content" region.
   @api
-  Scenario: Add a content page
+  Scenario: Fix issues on Travis-CI (not Chrome)
     When I press "Publish"
 
   @api @javascript
@@ -46,6 +48,12 @@ Feature: Use rich text editor
       | Underline       | span    | text-decoration | underline |
       | Align Full      | p       | text-align      | justify   |
       | Increase Indent | p       | padding-left    | 30px      |
+
+  # Because we start over with the Chrome tests, we need to do this again, but
+  # for Chrome. Again, this issue only occurs on Travis-CI.
+  @api @chrome
+  Scenario: Fix issues on Travis-CI (on Chrome)
+    When I press "Publish"
 
   # TODO: About 10% of the time this test will hang with Firefox, so for now,
   # we will run in Chrome only on Travis-CI to get consistent builds.
