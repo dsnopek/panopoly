@@ -194,7 +194,7 @@ after_tests() {
 # Prints a message about the section of the script.
 header() {
   echo
-  echo ** $@
+  echo "** $@"
   echo
 }
 
