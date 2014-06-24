@@ -193,9 +193,11 @@ after_tests() {
 
 # Prints a message about the section of the script.
 header() {
+  set +xv
   echo
   echo "** $@"
   echo
+  set -xv
 }
 
 # Sets the exit level to error.
