@@ -62,7 +62,10 @@ system_install() {
   find drupal/profiles/panopoly/modules -name \*.make -print0 | xargs -0 -n1 drush verify-makefile
 
   # Download an old version to test upgrading from.
-  if [[ "$UPGRADE" != none ]]; then header Downloading Panopoly $UPGRADE; drush dl panopoly-$UPGRADE; fi
+  if [[ "$UPGRADE" != none ]]; then
+    header Downloading Panopoly $UPGRADE
+    drush dl panopoly-$UPGRADE
+  fi
 
   # Setup files
   sudo chmod -R 777 drupal/sites/all
@@ -84,7 +87,8 @@ system_install() {
   # figure out how to start chrome with --no-sandbox.
   sudo rm -f $CHROME_SANDBOX
   sudo wget https://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
-  sudo chown root:root $CHROME_SANDBOX; sudo chmod 4755 $CHROME_SANDBOX
+  sudo chown root:root $CHROME_SANDBOX
+  sudo chmod 4755 $CHROME_SANDBOX
   sudo md5sum $CHROME_SANDBOX
 
   # Get Selenium
@@ -102,11 +106,20 @@ system_install() {
 before_tests() {
   # Hack to get the correct version of Panopoly Demo (there was no 1.0-rc4 or 1.0-rc5)
   UPGRADE_DEMO_VERSION=`echo $UPGRADE | sed -e s/^7.x-//`
-  case $UPGRADE_DEMO_VERSION in 1.0-rc[45]) UPGRADE_DEMO_VERSION=1.0-rc3;; esac
+  case $UPGRADE_DEMO_VERSION in
+    1.0-rc[45])
+      UPGRADE_DEMO_VERSION=1.0-rc3
+      ;;
+  esac
 
   # Do the site install (either the current revision or old for the upgrade).
   header Installing Drupal
-  if [[ "$UPGRADE" == none ]]; then cd drupal; else cd panopoly-$UPGRADE; drush dl panopoly_demo-$UPGRADE_DEMO_VERSION; fi
+  if [[ "$UPGRADE" == none ]]; then
+    cd drupal
+  else
+    cd panopoly-$UPGRADE
+    drush dl panopoly_demo-$UPGRADE_DEMO_VERSION
+  fi
   drush si panopoly --db-url=mysql://root:@127.0.0.1/drupal --account-name=admin --account-pass=admin --site-mail=admin@example.com --site-name="Panopoly" --yes
   drush dis -y dblog
   drush vset -y file_private_path "sites/default/private/files"
@@ -114,7 +127,11 @@ before_tests() {
   cd ../drupal
 
   # If we're an upgrade test, run the upgrade process.
-  if [[ "$UPGRADE" != none ]]; then header Upgrading to latest version; cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/ && drush updb --yes; drush cc all; fi
+  if [[ "$UPGRADE" != none ]]; then
+    header Upgrading to latest version
+    cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/ && drush updb --yes
+    drush cc all
+  fi
 
   # Run the webserver
   header Starting webserver
@@ -144,7 +161,9 @@ run_tests() {
   cd drupal/profiles/panopoly/tests/behat
 
   # If this isn't an upgrade, we test if any features are overridden.
-  if [[ "$UPGRADE" == none ]]; then run_test ../../scripts/check-overridden.sh; fi
+  if [[ "$UPGRADE" == none ]]; then
+    run_test ../../scripts/check-overridden.sh
+  fi
 
   # First, run all the tests in Firefox.
   run_test ./bin/behat --config behat.travis.yml
