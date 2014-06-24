@@ -31,6 +31,9 @@ install:
   # Copy the script into a stable location.
   - cp scripts/travis-ci.sh $HOME/
 
+  # Move to the directory above, where we should remain.
+  - cd ..
+
   # Start by doing system installation.
   - $HOME/travis-ci.sh system-install
 
@@ -38,10 +41,6 @@ before_script:
   - $HOME/travis-ci.sh before-tests
 
 script:
-  - pwd
-  - ls
-  - echo $TRAVIS_BUILD_DIR
-  - ls $TRAVIS_BUILD_DIR
   - $HOME/travis-ci.sh run-tests
 
 after_script:
