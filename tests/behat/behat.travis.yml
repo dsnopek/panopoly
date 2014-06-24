@@ -19,6 +19,9 @@ default:
       #  drupal_root: "/path/to/drupal/root"
       api_driver: 'drupal'
       region_map:
+        # The region on panopoly_page where the body appears (frequently
+        # customized on child distributions).
+        Panopoly Page Content: '.bryant-content'
         # Regions for Panopoly Layouts
         Boxton Content: ".boxton-content"
         Bryant Content: ".bryant-content"
