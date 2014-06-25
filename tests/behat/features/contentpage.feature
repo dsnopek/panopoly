@@ -10,7 +10,7 @@ Feature: Add content page
       And I fill in the following:
         | Title               | Testing title |
         | Editor              | plain_text    |
-        | Body                | Testing body  |
+        | body[und][0][value] | Testing body  |
 
   @api @panopoly_pages
   Scenario: Add a content page
@@ -32,7 +32,7 @@ Feature: Add content page
       And I fill in the following:
       | Title               | Testing title |
       | Editor              | plain_text    |
-      | Body                | Testing body  |
+      | body[und][0][value] | Testing body  |
       And I attach the file "screenshot.png" to "files[field_featured_image_und_0]"
     Then I should not see "The specified file panopoly.png could not be uploaded. The image is too small; the minimum dimensions are 300x200 pixels."
     When I fill in "Alt Text" with "Panopoly rocks"
