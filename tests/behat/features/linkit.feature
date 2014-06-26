@@ -5,7 +5,7 @@ Feature: Link to page on the site
 
   Background:
     Given I am logged in as a user with the "administrator" role
-      And a "panopoly_page" node with the title "Linkit Target"
+      And a "panopoly_test_page" node with the title "Linkit Target"
     When I visit "/node/add/panopoly-test-page"
       And I fill in the following:
         | Title  | Testing Linkit       |
@@ -18,7 +18,7 @@ Feature: Link to page on the site
       And I wait 1 seconds
       And I press the "Tab" key in the "edit-linkit-search" field
     Then the "edit-linkit-path" field should contain "/node/"
-    When I click "Attributes"
+    When I click "Attributes" in the "Linkit modal" region
       And I fill in "edit-linkit-title" with "Testing title"
       And I press "Insert link"
       # Normally, here we'd press "Publish", however some child distribtions
@@ -33,7 +33,7 @@ Feature: Link to page on the site
   Scenario: Add a link to an external page
     When I click the "Linkit" button in the "edit-body-und-0-value" WYSIWYG editor
       And I fill in "edit-linkit-path" with "https://drupal.org/project/panopoly"
-      And I click "Attributes"
+      And I click "Attributes" in the "Linkit modal" region
       And I fill in "edit-linkit-title" with "Testing title"
       And I press "Insert link"
       # Normally, here we'd press "Publish", however some child distribtions
