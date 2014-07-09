@@ -73,3 +73,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 1b0ead2
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2293747] = https://www.drupal.org/files/issues/panopoly-test-refactor-behat-2293747-25.patch
