@@ -170,7 +170,7 @@ run_tests() {
   fi
 
   # First, run all the tests in Firefox.
-  run_test ./bin/behat --config behat.travis.yml
+  #run_test ./bin/behat --config behat.travis.yml
 
   # Then run some Chrome-only tests.
   run_test ./bin/behat --config behat.travis.yml -p chrome
