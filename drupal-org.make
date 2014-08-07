@@ -38,6 +38,7 @@ projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
 projects[panopoly_admin][download][revision] = d3065c1
 projects[panopoly_admin][download][branch] = 7.x-1.x
+projects[panopoly_admin][patch][2212695] = https://www.drupal.org/files/issues/panopoly_admin-advanced-panes-2212695-10.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
@@ -73,3 +74,5 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 14a5bf6
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2212695] = https://www.drupal.org/files/issues/panopoly_test-advanced-panes-2212695-10.patch
+
