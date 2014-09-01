@@ -58,7 +58,7 @@ projects[panopoly_wysiwyg][subdir] = panopoly
 projects[panopoly_wysiwyg][download][type] = git
 projects[panopoly_wysiwyg][download][revision] = 47b5799
 projects[panopoly_wysiwyg][download][branch] = 7.x-1.x
-projects[panopoly_wysiwyg][patch][2186541] = http://drupal.org/files/issues/panopoly_wysiwyg-linkit_3_upgrade-2186541-5.patch
+projects[panopoly_wysiwyg][patch][2186541] = https://www.drupal.org/files/issues/panopoly_wysiwyg-linkit_3_upgrade-2186541-11.patch
 
 projects[panopoly_search][version] = 1.x-dev
 projects[panopoly_search][subdir] = panopoly
@@ -74,3 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 571f354
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2186541] = https://www.drupal.org/files/issues/panopoly_test-linkit_3_upgrade-2186541-11.patch
