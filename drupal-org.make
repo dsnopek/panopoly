@@ -73,3 +73,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 571f354
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2316067] = https://www.drupal.org/files/issues/panopoly_test_should-2316067-7.patch
