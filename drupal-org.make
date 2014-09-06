@@ -38,6 +38,7 @@ projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
 projects[panopoly_admin][download][revision] = ec8b9a4
 projects[panopoly_admin][download][branch] = 7.x-1.x
+projects[panopoly_admin][patch][2283531] = https://www.drupal.org/files/issues/panopoly_admin-preserve_path_alias-2283531-4.patch
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
@@ -73,3 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 571f354
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2283531] = https://www.drupal.org/files/issues/panopoly_test-preserve_path_alias-2283531-7.patch
