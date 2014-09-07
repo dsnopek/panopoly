@@ -73,4 +73,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 5e5cf8b
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][2316067] = https://www.drupal.org/files/issues/panopoly_test-remove-pages-dependency-2316067-10.patch
+projects[panopoly_test][patch][2316067] = https://www.drupal.org/files/issues/panopoly_test-remove-pages-dependency-2316067-13.patch
