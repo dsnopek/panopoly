@@ -6,7 +6,7 @@ core = 7.x
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = fbe84bb
+projects[panopoly_core][download][revision] = 952bef0
 projects[panopoly_core][download][branch] = 7.x-1.x
 
 projects[panopoly_images][version] = 1.x-dev
@@ -18,13 +18,13 @@ projects[panopoly_images][download][branch] = 7.x-1.x
 projects[panopoly_theme][version] = 1.x-dev
 projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
-projects[panopoly_theme][download][revision] = 242f70e
+projects[panopoly_theme][download][revision] = 0aaec84
 projects[panopoly_theme][download][branch] = 7.x-1.x
 
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
-projects[panopoly_magic][download][revision] = 56a6d74
+projects[panopoly_magic][download][revision] = 802520e
 projects[panopoly_magic][download][branch] = 7.x-1.x
 
 projects[panopoly_widgets][version] = 1.x-dev
@@ -36,13 +36,13 @@ projects[panopoly_widgets][download][branch] = 7.x-1.x
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
 projects[panopoly_admin][download][type] = git
-projects[panopoly_admin][download][revision] = ec8b9a4
+projects[panopoly_admin][download][revision] = 703b836
 projects[panopoly_admin][download][branch] = 7.x-1.x
 
 projects[panopoly_users][version] = 1.x-dev
 projects[panopoly_users][subdir] = panopoly
 projects[panopoly_users][download][type] = git
-projects[panopoly_users][download][revision] = 6a02f79
+projects[panopoly_users][download][revision] = 4e782f4
 projects[panopoly_users][download][branch] = 7.x-1.x
 
 ; The Panopoly Toolset
@@ -56,7 +56,7 @@ projects[panopoly_pages][download][branch] = 7.x-1.x
 projects[panopoly_wysiwyg][version] = 1.x-dev
 projects[panopoly_wysiwyg][subdir] = panopoly
 projects[panopoly_wysiwyg][download][type] = git
-projects[panopoly_wysiwyg][download][revision] = 47b5799
+projects[panopoly_wysiwyg][download][revision] = bcbfded
 projects[panopoly_wysiwyg][download][branch] = 7.x-1.x
 
 projects[panopoly_search][version] = 1.x-dev
@@ -71,5 +71,5 @@ projects[panopoly_test][version] = 1.x-dev
 projects[panopoly_test][subdir] = panopoly
 projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
-projects[panopoly_test][download][revision] = 571f354
+projects[panopoly_test][download][revision] = 5e5cf8b
 projects[panopoly_test][download][branch] = 7.x-1.x
