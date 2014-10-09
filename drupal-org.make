@@ -74,4 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 571f354
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][2186541] = https://www.drupal.org/files/issues/panopoly_test-linkit_3_upgrade-2186541-11.patch
+projects[panopoly_test][patch][2186541] = https://www.drupal.org/files/issues/panopoly_test-linkit_3_upgrade-2186541-15.patch
