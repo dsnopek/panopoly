@@ -28,7 +28,7 @@ projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = b82e582
 projects[panopoly_magic][download][branch] = 7.x-1.x
-projects[panoploy_magic][patch][2191069] = https://www.drupal.org/files/issues/panopoly_magic-radix-layouts-2191069-23.patch
+projects[panopoly_magic][patch][2191069] = https://www.drupal.org/files/issues/panopoly_magic-radix-layouts-2191069-23.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
