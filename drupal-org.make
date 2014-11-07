@@ -8,6 +8,7 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 97033d7
 projects[panopoly_core][download][branch] = 7.x-1.x
+projects[panopoly_core][patch][2191069] = https://www.drupal.org/files/issues/panopoly_core-radix-layouts-2191069-23.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
@@ -20,12 +21,14 @@ projects[panopoly_theme][subdir] = panopoly
 projects[panopoly_theme][download][type] = git
 projects[panopoly_theme][download][revision] = c362ca7
 projects[panopoly_theme][download][branch] = 7.x-1.x
+projects[panopoly_theme][patch][2191069] = https://www.drupal.org/files/issues/panopoly_theme-radix_layouts-2191069-23.patch
 
 projects[panopoly_magic][version] = 1.x-dev
 projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = b82e582
 projects[panopoly_magic][download][branch] = 7.x-1.x
+projects[panoploy_magic][patch][2191069] = https://www.drupal.org/files/issues/panopoly_magic-radix-layouts-2191069-23.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
