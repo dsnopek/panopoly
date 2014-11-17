@@ -78,4 +78,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = d7356d3
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][2191069] = https://www.drupal.org/files/issues/panopoly_test-radix-layouts-2191069-31.patch
+projects[panopoly_test][patch][2191069] = https://www.drupal.org/files/issues/panopoly_test-radix-layouts-2191069-49.patch
