@@ -32,7 +32,7 @@ projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
 projects[panopoly_widgets][download][revision] = da5e331
 projects[panopoly_widgets][download][branch] = 7.x-1.x
-projects[panopoly_widgets][patch][2013965] = https://www.drupal.org/files/issues/panopoly_widgets-image-link-2013965-6.patch
+projects[panopoly_widgets][patch][2013965] = https://www.drupal.org/files/issues/panopoly_widgets-image-link-2013965-15.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
