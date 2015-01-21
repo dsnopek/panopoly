@@ -26,6 +26,7 @@ projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = 7d21d13
 projects[panopoly_magic][download][branch] = 7.x-1.x
+projects[panopoly_magic][patch][2410921] = https://www.drupal.org/files/issues/panopoly_magic-avoid-overwriting-ipe-edit-button-2410921-16.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
