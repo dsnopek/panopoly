@@ -73,3 +73,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = e57dbed
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2276089] = https://www.drupal.org/files/issues/panopoly_test-file-allowed-extensions-2276089-13.patch
