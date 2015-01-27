@@ -73,4 +73,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 361d2e9
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][2268647] = https://www.drupal.org/files/issues/panopoly_test-managed-file-delete-2268647-13.patch
+projects[panopoly_test][patch][2268647] = https://www.drupal.org/files/issues/panopoly_test-managed-file-delete-2268647-15.patch
