@@ -27,7 +27,7 @@ projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = 3f5a1cd
 projects[panopoly_magic][download][branch] = 7.x-1.x
-projects[panopoly_magic][patch][2398347] = https://www.drupal.org/files/issues/panopoly_magic-fpp-revision-abuse-15.patch
+projects[panopoly_magic][patch][2398347] = https://www.drupal.org/files/issues/panopoly_magic-fpp-revision-abuse-22.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
