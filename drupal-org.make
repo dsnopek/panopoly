@@ -26,6 +26,7 @@ projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = 3add70d
 projects[panopoly_magic][download][branch] = 7.x-1.x
+projects[panopoly_magic][download][patch][2317467] = https://www.drupal.org/files/issues/panopoly_magic-wysiwyg-live-preview-2317467-3.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
@@ -73,3 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = a3b9071
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2317467] = https://www.drupal.org/files/issues/panopoly_test-wysiwyg-live-preview-2317467-4.patch
