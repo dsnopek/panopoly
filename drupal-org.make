@@ -64,6 +64,7 @@ projects[panopoly_search][subdir] = panopoly
 projects[panopoly_search][download][type] = git
 projects[panopoly_search][download][revision] = 9b3c44d
 projects[panopoly_search][download][branch] = 7.x-1.x
+projects[panopoly_search][patch][2425903] = https://www.drupal.org/files/issues/search-api-exceptions-during-install-2425903-5.patch
 
 ; For running the automated tests.
 
