@@ -75,4 +75,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 7f112c5
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][2398347] = https://www.drupal.org/files/issues/panopoly_test-fpp-revision-abuse-2398347-34.patch
+projects[panopoly_test][patch][2398347] = https://www.drupal.org/files/issues/panopoly_test-fpp-revision-abuse-2398347-37.patch
