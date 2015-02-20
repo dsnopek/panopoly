@@ -120,7 +120,7 @@ before_tests() {
     drush dl panopoly_demo-$UPGRADE_DEMO_VERSION
   fi
   drush si panopoly --db-url=mysql://root:@127.0.0.1/drupal --account-name=admin --account-pass=admin --site-mail=admin@example.com --site-name="Panopoly" --yes
-  drush dis -y dblog
+  #drush dis -y dblog
   drush vset -y file_private_path "sites/default/private/files"
   drush vset -y file_temporary_path "sites/default/private/temp"
 
