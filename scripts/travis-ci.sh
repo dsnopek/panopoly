@@ -117,7 +117,9 @@ before_tests() {
     cd drupal
   else
     cd panopoly-$UPGRADE
-    drush dl panopoly_demo-$UPGRADE_DEMO_VERSION
+    if [[ "$INSTALL_PANOPOLY_DEMO_FROM_APPS" != 1 ]]; then
+      drush dl panopoly_demo-$UPGRADE_DEMO_VERSION
+    fi
   fi
   drush si panopoly --db-url=mysql://root:@127.0.0.1/drupal --account-name=admin --account-pass=admin --site-mail=admin@example.com --site-name="Panopoly" --yes
   drush dis -y dblog
