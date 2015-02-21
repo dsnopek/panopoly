@@ -43,7 +43,9 @@ system_install() {
   cd drupal
   drush make --yes profiles/panopoly/drupal-org-core.make --prepare-install
   drush make --yes profiles/panopoly/drupal-org.make --no-core --contrib-destination=profiles/panopoly
-  drush dl panopoly_demo-1.x-dev
+  if [[ "$INSTALL_PANOPOLY_DEMO_FROM_APPS" != 1 ]]; then
+    drush dl panopoly_demo-1.x-dev
+  fi
   drush dl diff
   mkdir sites/default/private
   mkdir sites/default/private/files
