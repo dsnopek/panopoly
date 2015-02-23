@@ -26,7 +26,7 @@ projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = 5c77f38
 projects[panopoly_magic][download][branch] = 7.x-1.x
-projects[panopoly_magic][download][2170695] = https://www.drupal.org/files/issues/panopoly_magic-make-removed-view-modes-setting-2170695-10.patch
+projects[panopoly_magic][patch][2170695] = https://www.drupal.org/files/issues/panopoly_magic-make-removed-view-modes-setting-2170695-10.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
