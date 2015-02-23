@@ -6,13 +6,13 @@ core = 7.x
 projects[panopoly_core][version] = 1.x-dev
 projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
-projects[panopoly_core][download][revision] = 084c350
+projects[panopoly_core][download][revision] = 99cb79e
 projects[panopoly_core][download][branch] = 7.x-1.x
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
 projects[panopoly_images][download][type] = git
-projects[panopoly_images][download][revision] = 2fd94c2
+projects[panopoly_images][download][revision] = e07c68a
 projects[panopoly_images][download][branch] = 7.x-1.x
 
 projects[panopoly_theme][version] = 1.x-dev
@@ -62,7 +62,7 @@ projects[panopoly_wysiwyg][download][branch] = 7.x-1.x
 projects[panopoly_search][version] = 1.x-dev
 projects[panopoly_search][subdir] = panopoly
 projects[panopoly_search][download][type] = git
-projects[panopoly_search][download][revision] = 2ca4620
+projects[panopoly_search][download][revision] = d101070
 projects[panopoly_search][download][branch] = 7.x-1.x
 
 ; For running the automated tests.
