@@ -74,4 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 24aa950
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][2170695] = https://www.drupal.org/files/issues/panopoly_test-removed-view-modes-setting-2170695-13.patch
+projects[panopoly_test][patch][2170695] = https://www.drupal.org/files/issues/panopoly_test-make-removed-view-modes-setting-2170695-14.patch
