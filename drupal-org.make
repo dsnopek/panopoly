@@ -26,6 +26,7 @@ projects[panopoly_magic][subdir] = panopoly
 projects[panopoly_magic][download][type] = git
 projects[panopoly_magic][download][revision] = 61deb92
 projects[panopoly_magic][download][branch] = 7.x-1.x
+projects[panopoly_magic][patch][2430889] = https://www.drupal.org/files/issues/panopoly_magic-fpp-hidden-view-modes-2430889-7.patch
 
 projects[panopoly_widgets][version] = 1.x-dev
 projects[panopoly_widgets][subdir] = panopoly
@@ -73,3 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = c579302
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2430889] = https://www.drupal.org/files/issues/panopoly_test-fpp-hidden-view-modes-2430889-8.patch
