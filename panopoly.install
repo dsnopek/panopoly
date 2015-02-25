@@ -87,3 +87,7 @@ function _panopoly_install_help_block() {
   // Update the menu router information.
   menu_rebuild();
 }
+
+function panopoly_update_7103() {
+  throw new Exception("Testing");
+}
