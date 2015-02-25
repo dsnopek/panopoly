@@ -73,3 +73,6 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 24aa950
 projects[panopoly_test][download][branch] = 7.x-1.x
+
+; Adding patches:
+projects[panopoly_search][patch][] = https://www.drupal.org/files/issues/2436351-panopoly_search-patches-1.patch
