@@ -135,7 +135,7 @@ before_tests() {
   if [[ "$UPGRADE" != none ]]; then
     header Upgrading to latest version
     cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/
-    run_test drush updb --yes
+    drush updb --yes
     drush cc all
   fi
 
