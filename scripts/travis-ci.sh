@@ -159,12 +159,6 @@ before_tests() {
   # Our tests depend on panopoly_test.
   drush en -y panopoly_test
 
-  # Run the webserver
-  header Starting webserver
-  drush runserver --server=builtin 8888 > /dev/null 2>&1 &
-  echo $! > /tmp/web-server-pid
-  wait_for_port 8888
-
   cd ..
 
   # Run the selenium server
