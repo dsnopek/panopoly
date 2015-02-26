@@ -131,6 +131,8 @@ before_tests() {
   drush dis -y dblog
   drush vset -y file_private_path "sites/default/private/files"
   drush vset -y file_temporary_path "sites/default/private/temp"
+  drush vset -y preprocess_css "1"
+  drush vset -y preprocess_js "1"
 
   # Switch to the Panopoly platform built from Git (if we aren't there already).
   cd ../drupal
