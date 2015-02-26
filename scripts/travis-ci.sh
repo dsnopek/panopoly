@@ -98,6 +98,10 @@ system_install() {
  
   # Disable sendmail
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+  # Enable APC
+  echo "extension=apc.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  echo "apc.shm_size=256M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 }
 
 # before_tests
@@ -134,7 +138,8 @@ before_tests() {
   # If we're an upgrade test, run the upgrade process.
   if [[ "$UPGRADE" != none ]]; then
     header Upgrading to latest version
-    cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/ && drush updb --yes
+    cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/
+    run_test drush updb --yes
     drush cc all
   fi
 
