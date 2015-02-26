@@ -186,7 +186,7 @@ run_tests() {
   fi
 
   # First, run all the tests in Firefox.
-  run_test ./bin/behat --config behat.travis.yml features/search.feature --tags dblog
+  run_test ./bin/behat --config behat.travis.yml features/livepreview.feature
 
   # Then run some Chrome-only tests.
   #run_test ./bin/behat --config behat.travis.yml -p chrome
