@@ -64,6 +64,7 @@ projects[panopoly_search][subdir] = panopoly
 projects[panopoly_search][download][type] = git
 projects[panopoly_search][download][revision] = 9dbc48d
 projects[panopoly_search][download][branch] = 7.x-1.x
+projects[panopoly_search][patch][2423841] = https://www.drupal.org/files/issues/panopoly_search-top-search-phrases-2423841-8.patch
 
 ; For running the automated tests.
 
@@ -73,3 +74,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 5d6566d
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2423841] = https://www.drupal.org/files/issues/panopoly_test-top-search-phrases-2423841-9.patch
