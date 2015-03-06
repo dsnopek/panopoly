@@ -79,6 +79,10 @@ system_install() {
   # Get Chrome and ChromeDriver
   header Installing Google Chrome
   sudo apt-get install google-chrome-stable
+  # Downgrade chrome
+  wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_40.0.2214.115-1_amd64.deb
+  sudo dpkg -i google-chrome-stable_40.0.2214.115-1_amd64.deb
+  # ... continue as usual!
   wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
   unzip -a chromedriver_linux64.zip
 
@@ -186,7 +190,7 @@ run_tests() {
   fi
 
   # First, run all the tests in Firefox.
-  run_test ./bin/behat --config behat.travis.yml
+  #run_test ./bin/behat --config behat.travis.yml
 
   # Then run some Chrome-only tests.
   run_test ./bin/behat --config behat.travis.yml -p chrome
