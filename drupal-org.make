@@ -73,4 +73,4 @@ projects[panopoly_test][type] = module
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 14f446d
 projects[panopoly_test][download][branch] = 7.x-1.x
-projects[panopoly_test][patch][] = https://www.drupal.org/files/issues/panopoly_test-chrome41-2447475-5.patch
+projects[panopoly_test][patch][] = https://www.drupal.org/files/issues/panopoly_test-chrome41-2447475-6.patch
