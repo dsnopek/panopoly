@@ -80,8 +80,8 @@ system_install() {
   header Installing Google Chrome
   sudo apt-get install google-chrome-stable
   # Downgrade chrome
-  wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_40.0.2214.115-1_amd64.deb
-  sudo dpkg -i google-chrome-stable_40.0.2214.115-1_amd64.deb
+  #wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_40.0.2214.115-1_amd64.deb
+  #sudo dpkg -i google-chrome-stable_40.0.2214.115-1_amd64.deb
   # ... continue as usual!
   wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
   unzip -a chromedriver_linux64.zip
