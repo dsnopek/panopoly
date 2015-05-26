@@ -176,9 +176,11 @@ before_tests() {
 #
 run_tests() {
   header Running tests
-
+  
   # Make the Travis tests repos agnostic by injecting drupal_root with BEHAT_PARAMS
-  export BEHAT_PARAMS="extensions[Drupal\\DrupalExtension\\Extension][drupal][drupal_root]=$BUILD_TOP/drupal"
+  BEHAT_PARAMS='{"extensions":{"Drupal\\DrupalExtension":{"drupal":{"drupal_root":"BUILD_TOP/drupal"}}}}'
+  BEHAT_PARAMS=`echo $BEHAT_PARAMS | sed -e s#BUILD_TOP#$BUILD_TOP#`
+  export BEHAT_PARAMS
 
   cd drupal/profiles/panopoly/modules/panopoly/panopoly_test/tests
 
@@ -188,10 +190,10 @@ run_tests() {
   fi
 
   # First, run all the tests in Firefox.
-  run_test ./bin/behat --config behat.travis.yml
+  run_test ./bin/behat --config behat.travis.yml features/panopoly_magic/livepreview.feature
 
   # Then run some Chrome-only tests.
-  run_test ./bin/behat --config behat.travis.yml -p chrome
+  #run_test ./bin/behat --config behat.travis.yml -p chrome
 }
 
 # after_tests
