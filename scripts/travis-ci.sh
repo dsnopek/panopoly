@@ -190,10 +190,10 @@ run_tests() {
   fi
 
   # First, run all the tests in Firefox.
-  run_test ./bin/behat --config behat.travis.yml features/panopoly_magic/livepreview.feature
+  run_test ./bin/behat --config behat.travis.yml
 
   # Then run some Chrome-only tests.
-  #run_test ./bin/behat --config behat.travis.yml -p chrome
+  run_test ./bin/behat --config behat.travis.yml -p chrome
 }
 
 # after_tests
