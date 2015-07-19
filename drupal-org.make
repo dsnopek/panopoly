@@ -8,7 +8,7 @@ projects[panopoly_core][subdir] = panopoly
 projects[panopoly_core][download][type] = git
 projects[panopoly_core][download][revision] = 6ed0425
 projects[panopoly_core][download][branch] = 7.x-1.x
-projects[panopoly_core][patch][] = https://www.drupal.org/files/issues/panopoly_core-autocomplete-1.2-2456255-10.patch
+projects[panopoly_core][patch][] = https://www.drupal.org/files/issues/panopoly_core-autocomplete-1.2-2456255-12.patch
 
 projects[panopoly_images][version] = 1.x-dev
 projects[panopoly_images][subdir] = panopoly
