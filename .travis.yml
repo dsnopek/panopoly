@@ -3,9 +3,7 @@ language: php
 php:
   - 5.4
 
-# Forces our builds to run on Travis-CI's old infrastructure.
-# See Issue #2532134 about migrating to the new infrastructure!
-sudo: required
+sudo: false
 
 mysql:
   database: drupal
@@ -40,6 +38,12 @@ matrix:
       env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
     - php: "5.6"
       env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
+
+# Cache Composer & Drush directories.
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.drush/cache
 
 install:
   # Make some variables available to the travis-ci.sh script.

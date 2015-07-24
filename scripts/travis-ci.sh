@@ -95,7 +95,7 @@ system_install() {
   # Get Selenium
   header Downloading Selenium
   wget http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
- 
+
   # Disable sendmail
   echo sendmail_path=`which true` >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
@@ -193,7 +193,7 @@ run_tests() {
   run_test ./bin/behat --config behat.travis.yml
 
   # Then run some Chrome-only tests.
-  run_test ./bin/behat --config behat.travis.yml -p chrome
+  # run_test ./bin/behat --config behat.travis.yml -p chrome
 }
 
 # after_tests
