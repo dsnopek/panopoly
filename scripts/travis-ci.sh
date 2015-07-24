@@ -78,8 +78,10 @@ system_install() {
 
   # Get Chrome and ChromeDriver
   header Installing Google Chrome
-  sudo apt-get install -y --force-yes google-chrome-stable
-  wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
+  #sudo apt-get install -y --force-yes google-chrome-stable
+  wget http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_43.0.2357.134-1_amd64.deb -O google-chrome-stable.deb
+  sudo dpkg -i google-chrome-stable.deb
+  wget http://chromedriver.storage.googleapis.com/2.16/chromedriver_linux64.zip
   unzip -a chromedriver_linux64.zip
 
   # Insane hack from jsdevel:
