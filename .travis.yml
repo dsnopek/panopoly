@@ -18,12 +18,12 @@ matrix:
   allow_failures:
     - php: 7
     - php: hhvm
-  include:
-    - php: "5.5"
-      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-    - php: "5.6"
-      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-
+#  include:
+#    - php: "5.5"
+#      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
+#    - php: "5.6"
+#      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
+#
 env:
   global:
     # add composer's global bin directory to the path
@@ -69,6 +69,7 @@ env:
     - DRUPAL_TI_BEHAT_DRIVER="selenium"
     # We use both chrome and firefox, but this makes chromedriver available.
     - DRUPAL_TI_BEHAT_BROWSER="chrome"
+    - DRUPAL_TI_BEHAT_CHROME_URL="http://mirror.pcbeta.com/google/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_43.0.2357.134-1_amd64.deb"
 
     # PHPUnit specific commandline arguments.
     - DRUPAL_TI_PHPUNIT_ARGS=""
@@ -94,25 +95,25 @@ env:
     #- DRUPAL_TI_RUNNERS="phpunit simpletest behat"
   matrix:
     - UPGRADE=none     INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-    - UPGRADE=7.x-1.25
-    - UPGRADE=7.x-1.24
-    - UPGRADE=7.x-1.23
-    - UPGRADE=7.x-1.22
-    - UPGRADE=7.x-1.21
-    - UPGRADE=7.x-1.20
-    - UPGRADE=7.x-1.19
-    - UPGRADE=7.x-1.18
-    - UPGRADE=7.x-1.17
-    - UPGRADE=7.x-1.16
-    - UPGRADE=7.x-1.15
-    - UPGRADE=7.x-1.14
-    - UPGRADE=7.x-1.13
-    - UPGRADE=7.x-1.12
-    - UPGRADE=7.x-1.11
-    - UPGRADE=7.x-1.10
-    - UPGRADE=7.x-1.9
-    - UPGRADE=7.x-1.8
-
+#    - UPGRADE=7.x-1.25
+#    - UPGRADE=7.x-1.24
+#    - UPGRADE=7.x-1.23
+#    - UPGRADE=7.x-1.22
+#    - UPGRADE=7.x-1.21
+#    - UPGRADE=7.x-1.20
+#    - UPGRADE=7.x-1.19
+#    - UPGRADE=7.x-1.18
+#    - UPGRADE=7.x-1.17
+#    - UPGRADE=7.x-1.16
+#    - UPGRADE=7.x-1.15
+#    - UPGRADE=7.x-1.14
+#    - UPGRADE=7.x-1.13
+#    - UPGRADE=7.x-1.12
+#    - UPGRADE=7.x-1.11
+#    - UPGRADE=7.x-1.10
+#    - UPGRADE=7.x-1.9
+#    - UPGRADE=7.x-1.8
+#
 mysql:
   database: drupal_travis_db
   username: root
