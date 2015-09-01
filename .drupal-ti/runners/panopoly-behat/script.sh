@@ -13,10 +13,7 @@ cd "$DRUPAL_TI_BEHAT_DIR"
 
 panopoly_header Running tests
 
-#panopoly_header Hacking panopoly_test_panels.behat.inc ...
-rm -f steps/panopoly_test_panels.behat.inc
-mv -f $TRAVIS_BUILD_DIR/hacks/panopoly_test_panels.behat.inc steps/
-#rm -f $TRAVIS_BUILD_DIR/hacks/panopoly_test_panels.behat.inc
+# Copy into place because it doesn't come with panopoly_test.
 mv -f $TRAVIS_BUILD_DIR/behat.travis.yml.dist .
 
 # If this isn't an upgrade, we test if any features are overridden.
