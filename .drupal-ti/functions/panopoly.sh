@@ -26,29 +26,29 @@ function panopoly_ensure_drush() {
 # @todo Move to upstream.
 #
 function panopoly_ensure_distribution() {
-        # Ensure we are in the right directory.
-        mkdir -p "$DRUPAL_TI_DRUPAL_BASE"
-        cd "$DRUPAL_TI_DRUPAL_BASE"
+	# Ensure we are in the right directory.
+	mkdir -p "$DRUPAL_TI_DRUPAL_BASE"
+	cd "$DRUPAL_TI_DRUPAL_BASE"
 
-        # This function is re-entrant.
-        if [ -L "$DRUPAL_TI_DISTRIBUTION_NAME" ]
-        then
-                return
-        fi
+	# This function is re-entrant.
+	if [ -L "$DRUPAL_TI_DISTRIBUTION_NAME" ]
+	then
+		return
+	fi
 
-        # Find absolute path to module.
-        MODULE_DIR=$(cd "$TRAVIS_BUILD_DIR"; pwd)
+	# Find absolute path to module.
+	MODULE_DIR=$(cd "$TRAVIS_BUILD_DIR"; pwd)
 
-        # Point distribution into the drupal installation directory.
-        ln -sf "$MODULE_DIR" "$DRUPAL_TI_DISTRIBUTION_NAME"
+	# Point distribution into the drupal installation directory.
+	ln -sf "$MODULE_DIR" "$DRUPAL_TI_DISTRIBUTION_NAME"
 }
 
 #
 # Ensures that the distribution is build.
 #
 function panopoly_build_distribution() {
-        # Ensure we are in the right directory.
-        cd "$DRUPAL_TI_DRUPAL_BASE"
+	# Ensure we are in the right directory.
+	cd "$DRUPAL_TI_DRUPAL_BASE"
 
 	# Build Codebase
 	mkdir profiles
@@ -87,7 +87,7 @@ function panopoly_build_distribution() {
 #
 # Overwrite functions/drupal.sh install function.
 # @todo Upstream tries to check for drupal dir existing, which fails
-#       this. Use a file instead.
+#				this. Use a file instead.
 #
 function drupal_ti_ensure_drupal() {
 	# This function is re-entrant.
@@ -96,24 +96,24 @@ function drupal_ti_ensure_drupal() {
 		return
 	fi
 
-        # HHVM env is broken: https://github.com/travis-ci/travis-ci/issues/2523.
-        PHP_VERSION=`phpenv version-name`
-        if [ "$PHP_VERSION" = "hhvm" ]
-        then
-                # Create sendmail command, which links to /bin/true for HHVM.
-                BIN_DIR="$TRAVIS_BUILD_DIR/../drupal_travis/bin"
-                mkdir -p "$BIN_DIR"
-                ln -s $(which true) "$BIN_DIR/sendmail"
-                export PATH="$BIN_DIR:$PATH"
-        fi
+	# HHVM env is broken: https://github.com/travis-ci/travis-ci/issues/2523.
+	PHP_VERSION=`phpenv version-name`
+	if [ "$PHP_VERSION" = "hhvm" ]
+	then
+		# Create sendmail command, which links to /bin/true for HHVM.
+		BIN_DIR="$TRAVIS_BUILD_DIR/../drupal_travis/bin"
+		mkdir -p "$BIN_DIR"
+		ln -s $(which true) "$BIN_DIR/sendmail"
+		export PATH="$BIN_DIR:$PATH"
+	fi
 
-        # Create database and install Drupal.
-        mysql -e "create database $DRUPAL_TI_DB"
+	# Create database and install Drupal.
+	mysql -e "create database $DRUPAL_TI_DB"
 
-        mkdir -p "$DRUPAL_TI_DRUPAL_BASE"
-        cd "$DRUPAL_TI_DRUPAL_BASE"
+	mkdir -p "$DRUPAL_TI_DRUPAL_BASE"
+	cd "$DRUPAL_TI_DRUPAL_BASE"
 
-        drupal_ti_install_drupal
+	drupal_ti_install_drupal
 	touch "$TRAVIS_BUILD_DIR/../drupal_ti-drupal-installed"
 }
 
@@ -155,10 +155,10 @@ function drupal_ti_install_drupal() {
 		# Use strict checking again.
 		set -e
 
-	        panopoly_header Upgrading to latest version
-        	cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/
-	        drush updb --yes
-	        drush cc all
+		panopoly_header Upgrading to latest version
+		cp -a ../panopoly-$UPGRADE/sites/default/* sites/default/
+		drush updb --yes
+		drush cc all
 	fi
 }
 
@@ -166,19 +166,19 @@ function drupal_ti_install_drupal() {
 # Use some optimized settings to make tests faster.
 #
 function panopoly_optimize() {
-  # Enable APC
-  if [[ $TRAVIS_PHP_VERSION < "5.5" ]]; then
-    echo "extension=apc.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    echo "apc.shm_size=256M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  fi
+	# Enable APC
+	if [[ $TRAVIS_PHP_VERSION < "5.5" ]]; then
+		echo "extension=apc.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+		echo "apc.shm_size=256M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+	fi
 
-  # Increase the MySQL connection timeout on the PHP end.
-  echo "mysql.connect_timeout=3000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  echo "default_socket_timeout=3000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+	# Increase the MySQL connection timeout on the PHP end.
+	echo "mysql.connect_timeout=3000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+	echo "default_socket_timeout=3000" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
-  # Increase the MySQL server timetout and packet size.
-  mysql -e "SET GLOBAL wait_timeout = 36000;"
-  mysql -e "SET GLOBAL max_allowed_packet = 33554432;"
+	# Increase the MySQL server timetout and packet size.
+	mysql -e "SET GLOBAL wait_timeout = 36000;"
+	mysql -e "SET GLOBAL max_allowed_packet = 33554432;"
 }
 
 #
@@ -189,5 +189,3 @@ function panopoly_header() {
 	echo "** $@"
 	echo
 }
-
-
