@@ -23,7 +23,7 @@ matrix:
 #      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
 #    - php: "5.6"
 #      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-#
+
 env:
   global:
     # add composer's global bin directory to the path
