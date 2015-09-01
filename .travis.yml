@@ -119,6 +119,12 @@ mysql:
   username: root
   encoding: utf8
 
+# Cache Composer & Drush directories.
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.drush/cache
+
 before_install:
   - composer self-update
   - composer global require "lionsad/drupal_ti:1.*"
