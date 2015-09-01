@@ -17,7 +17,7 @@ panopoly_header Running tests
 rm -f steps/panopoly_test_panels.behat.inc
 mv -f $TRAVIS_BUILD_DIR/hacks/panopoly_test_panels.behat.inc steps/
 #rm -f $TRAVIS_BUILD_DIR/hacks/panopoly_test_panels.behat.inc
-mv -f $TRAVIS_BUILD_DIR/hacks/behat.travis.yml.dist .
+mv -f $TRAVIS_BUILD_DIR/behat.travis.yml.dist .
 
 # If this isn't an upgrade, we test if any features are overridden.
 if [[ "$UPGRADE" == none ]]
