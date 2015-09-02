@@ -14,13 +14,12 @@ cd "$DRUPAL_TI_BEHAT_DIR"
 panopoly_header Running tests
 
 # Copy into place because it doesn't come with panopoly_test.
-mv -f $TRAVIS_BUILD_DIR/behat.travis.yml.dist .
+mv -f "$TRAVIS_BUILD_DIR"/behat.travis.yml.dist .
 
 # If this isn't an upgrade, we test if any features are overridden.
 if [[ "$UPGRADE" == none ]]
 then
-	echo @todo remove commented out part.
-#	"$TRAVIS_BUILD_DIR"/scripts/check-overridden.sh
+	"$TRAVIS_BUILD_DIR"/scripts/check-overridden.sh
 fi
 
 # This replaces environment vars from $DRUPAL_TI_BEHAT_YML into 'behat.yml'.
