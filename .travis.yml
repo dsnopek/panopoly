@@ -122,7 +122,7 @@ mysql:
 before_install:
   #- composer self-update
   #- composer global require "lionsad/drupal_ti:1.*"
-  - git clone https://github.com/dsnopek/drupal_ti.git $HOME/drupal_ti
+  - git clone https://github.com/dsnopek/drupal_ti.git --branch chromedriver $HOME/drupal_ti
   - export PATH="$PATH:$HOME/drupal_ti"
   - drupal-ti before_install
 
