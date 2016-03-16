@@ -77,6 +77,8 @@ env:
     - DRUPAL_TI_COVERAGE="satooshi/php-coveralls:0.6.*"
     # This needs to match your .coveralls.yml file.
     - DRUPAL_TI_COVERAGE_FILE="build/logs/clover.xml"
+    # Pin to Drush 7 so we can test on PHP 5.4.
+    - DRUPAL_TI_DRUSH_VERSION="drush/drush:7.*"
 
     # Debug options
     #- DRUPAL_TI_DEBUG="-x -v"
