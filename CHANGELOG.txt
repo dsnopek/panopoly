@@ -1,3 +1,105 @@
+Panopoly 7.x-1.32, 2016-03-03
+----------------------
+- Update Panopoly Core for Issue #2679947 by cboyden: Security update to
+  fieldable panels panes 1.8.
+- Start testing upgrades from the 1.31 release.
+- Restored drupal-org.make after the 1.31 release.
+
+Panopoly 7.x-1.31, 2016-02-25
+----------------------
+- Update to Drupal 7.43 for SA-CORE-2016-001.
+- Update Panopoly Widgets and WYSIWYG for Issue #2646372 by dsnopek:
+  Panopoly_widgets Schema Update 7016 Integrity constraint violation.
+- Phing build exposes too much to the public.
+- Update Panopoly Widgets for Issue #2653834 by dsnopek: Pass entity to
+  'panopoly_spotlight_wrapper' and 'panopoly_spotlight_view' theme functions.
+- Start testing upgrades from the 1.30 release.
+- Restored drupal-org.make after the 1.30 release.
+
+Panopoly 7.x-1.30, 2016-01-06
+----------------------
+- Update Panopoly Test for Issue #2645668: "Use an image from elsewhere on the
+  web" test failing.
+- Assign UID 1 to 'administrator' role on install.
+- Update Panopoly Core for Issue #2645654: Update field_group to 1.5 for SA-
+  CONTRIB-2016-001.
+- Update Panopoly Admin for Issue #2637004 by humansky: Default admin role.
+- Update Panopoly Widgets for Issue #2623662 by dsnopek: Access denied when
+  adding Media in WYSIWYG.
+- Update Panopoly Widgets for Issue #2617618 by dsnopek: Don't set default image
+  for image widget.
+- Start testing upgrades from the 1.29 release.
+- Restored drupal-org.make after the 1.29 release.
+
+Panopoly 7.x-1.29, 2015-11-18
+----------------------
+- Update Panopoly Widgets for Issue #2618206 by mpotter: Patching media for
+  opening multiple media browser popups.
+- Bah! We don't want to test only 7.x-1.29, but skip testing 8.x-2.x (otherwise
+  we lose the issue branch tests).
+- Update Panopoly Admin for Issue #2616342 by rajarju: User base_url for showing
+  site url over permalink field (label).
+- Update Panopoly Core for Issue #2610366 by mpotter: Panels patches for Atrium.
+- Update Panopoly Images for Issue #2573877 by Andrew_Mallis: tighten up media
+  browser thumbnails.
+- Merge branch '7.x-1.29' of git.drupal.org:project/panopoly into 7.x-1.29.
+- For now, only test the 7.x-1.29 branch.
+- Update Panopoly Widgets for Issue #2533688 by dsnopek: Update to Media
+  2.0-beta1 and File Entity 2.0-beta2.
+- Update Panopoly Core for Issue #2592731 by mpotter: Update Features 2.7 (and
+  Features Override).
+- Update Panopoly Core for Issue #2578219 by mglaman: Update defaultconfig to
+  version 1.0-alpha11.
+- Revert "Update Panopoly Core for Issue #2597273: Update to Pathauto 1.3".
+- Update Panopoly Core for Issue #2567483 by humansky: Update to Date 2.9.
+- Update Panopoly Core for Issue #2597273: Update to Pathauto 1.3.
+- Update Panopoly Core for Issue #2561733: Update to CTools 1.9.
+- Update Panopoly WYSIWYG for Issue #2553903: Update to Linkit 3.4.
+- Start testing upgrades from the 1.28 release.
+- Restored drupal-org.make after the 1.28 release.
+
+Panopoly 7.x-1.28, 2015-10-21
+----------------------
+- Update to Drupal 7.41 for SA-CORE-2015-004 and jquery_update for SA-
+  CONTRIB-2015-158.
+- Update Panopoly Admin for Issue #2557317 by visabhishek, rhuffstedtler: Remove
+  question mark from Enable/Disable link on pane library.
+- Drop support for updating from Panopoly version that were release more than a
+  year ago.
+- Update Panopoly Search for Issue #2560753 by amaisano: Search block pane
+  config ignores prompt override.
+- Revert "Update Panopoly Search for Issue #2560753 by amaisano: Search block
+  pane config ignores prompt override".
+- Update Panopoly Core for Issue #2583449 by LCM: Missing file access checks for
+  private files attached to Fieldable Panel Panes.
+- Update Panopoly Theme for Issue #2574491 by Alex Bukach: Don't rebuild
+  accordions on AJAX requests.
+- Update Panopoly Theme for Issue #2541838 by hart0554: Convert accordion
+  "heightAuto" to "heightStyle" for jQuery UI >= 1.9.
+- Update Panopoly WYSIWYG for Issue #2562983 by kekkis: Incorporate patch that
+  eases creating new text formats.
+- Update Panopoly Core for Issue #2562157: Can't distinguish reusable content
+  without admin title when previews are in single mode.
+- Update Panopoly Core for Issue #2559617 by mglaman: CTools "Undefined index:
+  access callback in ctools_entity_from_field_context()".
+- Update Panopoly Images for Issue #2558367 by uttamkotekar: Type-o findthe in
+  watchdog() text panopoly_images module.
+- Update to Selenium 2.47.1 to fix test stability issues.
+- Check-overridden.sh failing on Travis-CI.
+- Update Panopoly Admin for Issue #2552723 by B-Prod: Update to
+  simplified_menu_admin 1.0.
+- Update Panopoly Widgets for Issue #2528248 by dsnopek, chrisgross: Text on
+  tabs on Media Browser is lower than it is on other interfaces.
+- Update Panopoly Search for Issue #2565175 by cboyden: Performance issues when
+  indexing HTML-heavy sites.
+- Fix the create_test_branch.py script for the changes in .travis.yml.
+- Add back PHP 5.5 and 5.6 tests!.
+- Fix permissions on new script files.
+- Cache Drush and Composer on Travis for builds.
+- Migrate to new Travis infrastructure.
+- Start testing upgrades from the 1.27 release.
+- Restored drupal-org.make after the 1.27 release.
+
 Panopoly 7.x-1.27, 2015-09-02
 ----------------------
 - Update Panopoly Core for Issue #2562017: Update to fieldable_panels_panes
