@@ -32,6 +32,7 @@ projects[panopoly_widgets][subdir] = panopoly
 projects[panopoly_widgets][download][type] = git
 projects[panopoly_widgets][download][revision] = 9805d57
 projects[panopoly_widgets][download][branch] = 7.x-1.x
+projects[panopoly_widgets][patch][2623318] = https://www.drupal.org/files/issues/panopoly_widgets-small-spotlight-2623318-11.patch
 
 projects[panopoly_admin][version] = 1.x-dev
 projects[panopoly_admin][subdir] = panopoly
@@ -72,3 +73,4 @@ projects[panopoly_test][subdir] = panopoly
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = d501c58
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][2717277] = https://www.drupal.org/files/issues/panopoly_test-imgur-2717277-4.patch
