@@ -21,6 +21,11 @@ panopoly_build_distribution
 # Install the behat extension.
 panopoly_header Installing Behat
 cd "$DRUPAL_TI_DRUPAL_DIR/$DRUPAL_TI_BEHAT_DIR"
+# Use older versions of the Behat extension when on PHP 5.4
+if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.4" ]]; then
+	cp composer.json-php54 composer.json
+	cp composer.lock-php54 composer.lock
+fi
 composer install --no-interaction --prefer-source --dev
 
 # Disable sendmail
