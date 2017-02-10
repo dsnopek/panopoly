@@ -61,6 +61,8 @@ function panopoly_build_distribution() {
 	cd drupal
 	drush make --yes profiles/panopoly/drupal-org-core.make --prepare-install
 	drush make --yes profiles/panopoly/drupal-org.make --no-core --contrib-destination=profiles/panopoly
+	# TMP: move the test directory
+	mv profiles/panopoly/modules/panopoly_test/tests profiles/panopoly/modules/panopoly_test/behat
 	if [[ "$INSTALL_PANOPOLY_DEMO_FROM_APPS" != 1 ]]; then
 		drush dl panopoly_demo-1.x-dev
 	fi
