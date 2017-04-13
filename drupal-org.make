@@ -72,3 +72,5 @@ projects[panopoly_test][subdir] = panopoly
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = 34913ab
 projects[panopoly_test][download][branch] = 7.x-1.x
+
+projects[panopoly_test][patch][2869079] = https://www.drupal.org/files/issues/panopoly_test-run-all-in-firefox-2.patch
