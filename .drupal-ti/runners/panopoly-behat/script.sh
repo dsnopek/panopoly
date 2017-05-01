@@ -28,7 +28,7 @@ drupal_ti_replace_behat_vars
 ARGS=( $DRUPAL_TI_BEHAT_ARGS )
 
 # First, run all the tests in Firefox.
-./bin/behat "${ARGS[@]}"
+#./bin/behat "${ARGS[@]}"
 
 # Then run some Chrome-only tests.
 ./bin/behat -p chrome "${ARGS[@]}"
