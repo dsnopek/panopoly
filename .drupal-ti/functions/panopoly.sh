@@ -13,6 +13,7 @@ function panopoly_ensure_drush() {
 	fi
 
 	composer global config repositories.drush '{"type": "vcs", "url": "https://github.com/Roomify/drush.git", "no-api": true}'
+	export DRUPAL_TI_DRUSH_VERSION="drush/drush:8.x-dev"
 
 	drupal_ti_ensure_drush
 
