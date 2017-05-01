@@ -12,7 +12,7 @@ function panopoly_ensure_drush() {
 		return
 	fi
 
-	composer global config repositories.drush vcs git@github.com:Roomify/drush.git
+	composer global config repositories.drush vcs https://github.com/Roomify/drush.git
 
 	drupal_ti_ensure_drush
 
