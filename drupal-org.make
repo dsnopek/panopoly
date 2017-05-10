@@ -58,6 +58,7 @@ projects[panopoly_wysiwyg][subdir] = panopoly
 projects[panopoly_wysiwyg][download][type] = git
 projects[panopoly_wysiwyg][download][revision] = b74dd93
 projects[panopoly_wysiwyg][download][branch] = 7.x-1.x
+projects[panopoly_wysiwyg][patch][2876031] = https://www.drupal.org/files/issues/panopoly_wysiwyg-tinymce-chrome58-fix-2876031-6.patch
 
 projects[panopoly_search][version] = 1.x-dev
 projects[panopoly_search][subdir] = panopoly
