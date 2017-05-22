@@ -28,10 +28,10 @@ drupal_ti_replace_behat_vars
 ARGS=( $DRUPAL_TI_BEHAT_ARGS )
 
 # First, run all the tests in Firefox.
-if ! ./bin/behat --rerun "${ARGS[@]}"; then
-	echo "Failures detected. Re-running failed scenarios."
-	./bin/behat --rerun "${ARGS[@]}"
-fi
+#if ! ./bin/behat --rerun "${ARGS[@]}"; then
+#	echo "Failures detected. Re-running failed scenarios."
+#	./bin/behat --rerun "${ARGS[@]}"
+#fi
 
 # Then run some Chrome-only tests.
 if ! ./bin/behat -p chrome --rerun "${ARGS[@]}"; then
