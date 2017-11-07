@@ -72,3 +72,4 @@ projects[panopoly_test][subdir] = panopoly
 projects[panopoly_test][download][type] = git
 projects[panopoly_test][download][revision] = c1ee1d1
 projects[panopoly_test][download][branch] = 7.x-1.x
+projects[panopoly_test][patch][] = https://www.drupal.org/files/issues/panopoly_test-headless-chrome-2914229-3.patch
