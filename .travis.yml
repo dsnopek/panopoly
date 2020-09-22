@@ -14,22 +14,17 @@ services:
   - mysql
 
 php:
-  - 5.6
+  - 7.2
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - php: "hhvm"
-      env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-  include:
-    #- php: "7"
-    #  env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-    #- php: "5.5"
-    #  env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-    #- php: "5.4"
-    #  env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-    #- php: "hhvm"
-    #  env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
+  #include:
+  #  - php: "7.0"
+  #    env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
+  #  - php: "7.1"
+  #    env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
+  #  - php: "5.6"
+  #    env: UPGRADE=none INSTALL_PANOPOLY_DEMO_FROM_APPS=1
 
 env:
   global:
@@ -88,6 +83,9 @@ env:
     # This needs to match your .coveralls.yml file.
     - DRUPAL_TI_COVERAGE_FILE="build/logs/clover.xml"
 
+    # Print out PHP notices that come up during Behat tests.
+    - PANOPOLY_BEHAT_FLAG_PHP_NOTICES=1
+
     # Debug options
     #- DRUPAL_TI_DEBUG="-x -v"
     # Set to "all" to output all files, set to e.g. "xvfb selenium" or "selenium",
@@ -104,16 +102,14 @@ env:
     #- DRUPAL_TI_RUNNERS="phpunit simpletest behat"
   matrix:
     - UPGRADE=none     INSTALL_PANOPOLY_DEMO_FROM_APPS=1
-    #- UPGRADE=7.x-1.51
-    #- UPGRADE=7.x-1.50
-    #- UPGRADE=7.x-1.49
-    #- UPGRADE=7.x-1.48
-    #- UPGRADE=7.x-1.47
-    #- UPGRADE=7.x-1.46
-    #- UPGRADE=7.x-1.45
-    #- UPGRADE=7.x-1.44
-    #- UPGRADE=7.x-1.43
-    #- UPGRADE=7.x-1.42
+    #- UPGRADE=7.x-1.76
+    #- UPGRADE=7.x-1.75
+    #- UPGRADE=7.x-1.74
+    #- UPGRADE=7.x-1.72
+    #- UPGRADE=7.x-1.71
+    #- UPGRADE=7.x-1.70
+    #- UPGRADE=7.x-1.69
+    #- UPGRADE=7.x-1.68
 
 # Cache Composer & Drush directories.
 cache:
@@ -129,6 +125,7 @@ mysql:
 before_install:
   - composer self-update
   - composer global require "lionsad/drupal_ti:dev-master"
+  - sudo apt-get install -y libgconf-2-4
   - drupal-ti before_install
 
 install:

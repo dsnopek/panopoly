@@ -1,3 +1,372 @@
+Panopoly 7.x-1.76, 2020-09-17
+-------------------
+- Update to Drupal 7.73 for SA-CORE-2020-007.
+- Start testing upgrade from 1.75.
+
+Panopoly 7.x-1.75, 2020-06-18
+-------------------
+- Update to Drupal 7.72 for SA-CORE-2020-004.
+- Update the Behat Drupal extension to 4.0.1.
+- Revert "Update the composer files for Travis".
+- Update the composer files for Travis.
+- Detect PHP notices/errors.
+- Removing 7.x-1.73 because it will fail for not having been a "complete"
+  release.
+- Start testing upgrades from 1.72 and 1.73.
+
+Panopoly 7.x-1.74, 2020-05-20
+-------------------
+- Merge tag '7.x-1.73' into 7.x-1.x.
+- Update to Drupal 7.70 for SA-CORE-2020-002 and SA-CORE-2020-003.
+- File widget doesn't seem to switch to Media browser in update tests.
+- Modernize the set of PHP versions used in the tests.
+- Drop support for updating from Panopoly version that were release more
+  than a year ago.
+- Fix Features overridden after tablefield patch from #3130749.
+- Update Panopoly Widgets with latest version of Media (media-7.x-2.26).
+- Update Panopoly Widgets with latest version of TableField
+  (tablefield-7.x-3.6).
+- Update Panopoly Core with latest version of Views (views-7.x-3.24).
+- Fix fatal error in Date with PHP 7.1+.
+- Panopoly_magic doesn't render previews for field_collection's with
+  field_collection 7.x-1.1.
+- Fieldable Panels Panes fields missing from UI.
+- Moving (some?) panopoly_search variables out of strongarm.
+- Patch Tablefield for header row orientation per widget.
+- Prevent PHP notice (Undefined index: title in link_field_load()) during
+  live preview of Image widgets.
+- Modifying content of reusable widgets doesn't actually save when first
+  adding the widget.
+- Update WYSIWYG to version 2.6.
+- Add a 'robo git:pre-commit' to ensure we run 'robo build:drupal-org-make'
+  before committing.
+- Revert "Issue #3094890 by cboyden: Update WYSIWYG to version 2.6".
+- Forgot to run 'robo build:drupal-org-make' before last two commits!.
+- Update Media modules in Panopoly Widgets.
+- Update WYSIWYG to version 2.6.
+- Update Link to version 1.7.
+- Add 'robo diff --uncommitted' for making patches from local changes.
+- Fix undefined index in panopoly_admin_menu_validate.
+- Add Robo command to easily make single module patches for Drupal.org.
+- Forgot to run 'robo build:drupal-org-make' after the latest .make file
+  updates.
+- Update Panopoly Core with latest version of Views (views-7.x-3.23).
+- Update Facet API and Search API Solr.
+- Update Panopoly Core with latest version of Views (views-7.x-3.23).
+- Start testing upgrades from the 1.72 release.
+
+Panopoly 7.x-1.73, 2020-05-20
+-------------------
+- Issue #3138388: Update to Drupal 7.70 for SA-CORE-2020-002 and SA-CORE-2020-003
+
+Panopoly 7.x-1.72, 2019-12-19
+-------------------
+- Issue #3102147: Update to Drupal 7.69 for SA-CORE-2019-012.
+- Issue #2884143 by dsnopek, cboyden: Switch File widget to use Media
+  Browser.
+- Issue #2574369 by dsnopek, cboyden: Tests fail with Radix.
+- Fix 'robo create-test-branch' for patches that make .orig or .rej files.
+- Issue #2975934 by dsnopek, cboyden: Accessibility improvements for the
+  mini pager on the Spotlight widget.
+- Issue #2672468 by cboyden: PHP notices when Piece of Content widget is
+  empty.
+- Issue #3087510 by cboyden: PHP notice when panes have no titles.
+- Issue #3030478 by collinhaines, junaidpv, cboyden: Notice: Only variables
+  should be passed by reference in
+  panopoly_magic_form_ctools_entity_field_content_type_formatter_options_alter().
+- Issue #2743231 by dsnopek: Add Views Pane error - Undefined index:
+  #type.
+- Start testing upgrades from the 1.71 release.
+
+Panopoly 7.x-1.71, 2019-11-19
+-------------------
+- Issue #3094252:  Update admin_views to 7.x-1.7 for SA-CONTRIB-2019-076.
+- Issue #3069824 by dsnopek, cboyden: Display type setting doesn't work for
+  overridden views displays.
+- Backport support for PANOPOLY_BEHAT_WINDOW_SIZE from 8.x-2.x.
+- Issue #2454947 by dsnopek, cboyden: Preview doesn't update when editing
+  the value of a field via FAPE.
+- Issue #3076935 by dsnopek, cboyden: Live preview doesn't update when
+  Views pane uses Views caching.
+- Fix tests on Travis.
+- Issue #3030479 by collinhaines, cboyden: Notice: Undefined index:
+  triggering_element in
+  panopoly_magic_form_ctools_entity_field_content_type_formatter_options_alter().
+- Issue #3070684 by dsnopek, cboyden: Add option to disallow view mode
+  selection for Views content panes in IPE.
+- Fix minor issues with 'robo create-test-branch'.
+- Change Behat version to hopefully fix the tests.
+- Start testing upgrades from the 1.70 release.
+- Updated panopoly_magic's CHANGELOG.txt for 7.x-1.70 release.
+- Issue #2971163 by dsnopek: Aaaah! Forgot panopoly_magic.
+- Issue #2971163 by dsnopek: 'robo release' wouldn't work with
+  composer.json modified for Travis, so completely split those.
+
+Panopoly 7.x-1.70, 2019-06-28
+-------------------
+- Issue #2971163 by dsnopek: Attempt to fix extra 'drush rn' output mixing
+  into CHANGELOG.txt.
+- Issue #2971163 by dsnopek: Replace all scripts and Phing build process
+  with Robo.
+- Issue #3033212 by dsnopek, cboyden: Hide "Always display title" option on
+  Submenu widget.
+- Issue #2905972 by dsnopek, cboyden: Use empty alt="" on images without
+  alt, rather than omitting alt attribute.
+- Issue #2477303 by dsnopek: Drop support for updating from Panopoly
+  version that were release more than a year ago.
+- Start testing upgrades from the 1.68 and 1.69 releases.
+
+7.x-1.69, 2019-06-07
+-------------------
+- Issue #2851122 by dsnopek: Update scripts/create_test_branch.py for monorepo.
+- Fix .make file generation.
+- Issue #2851122: Move Panopoly from 'manyrepos' to 'monorepo' with a subtree
+  split.
+- Update Panopoly Search for Issue #3053321 by byronveale, dsnopek: Update
+  Panopoly Search to search_api-7.x-1.26.
+- Panopoly Widgets for Issue #3053322 by byronveale: Update Panopoly Widgets to
+  media_youtube-7.x-3.8.
+- Update Panopoly Core for Issue #3053320 by byronveale: Update Panopoly Core to
+  use views-7.x-3.22.
+- Update Panopoly Core for Issue #3053318 by byronveale: Update Panopoly Core to
+  fieldable_panels_panes-7.x-1.13.
+- Update Panopoly Core for Issue #3053316 by byronveale: Update Panopoly Core to
+  use devel-7.x-1.7.
+- Update Panopoly Core for Issue #3053315 by byronveale: Update to
+  ctools-7.x-1.15.
+- Update Panopoly Widgets for Issue #3039431 by junaidpv: Taking "Manage Fields"
+  paths of content type like "admin/structure/types/manage/article/fields"
+  redirects to wrong non-existing path.
+
+7.x-1.68, 2019-05-29
+-------------------
+- Update Panopoly Core for Issue #3057972: Update UUID to 7.x-1.3 for SA-
+  CONTRIB-2019-052.
+- Update Panopoly Widgets for Issue #3057971: Update tablefield to 7.x-3.5 for
+  SA-CONTRIB-2019-051.
+- Start testing upgrades from the 1.67 release.
+- Restored drupal-org.make after the 1.67 release.
+
+7.x-1.67, 2019-05-09
+-------------------
+- Update to Drupal 7.67 for SA-CORE-2019-007.
+- Update Panopoly Widgets for Issue #3052950 by dsnopek: Allow Spotlight links
+  to be up to 255 characters.
+- Update Panopoly Core for Issue #2975931 by dsnopek, aubjr_drupal: Update
+  default jQuery version to 1.10 on new sites.
+- Move disruptive composer.json/lock out of the top-level directory.
+- Start testing upgrades from the 1.66 release.
+- Restored drupal-org.make after the 1.66 release.
+
+7.x-1.66, 2019-04-18
+-------------------
+- Update to Drupal 7.66 for SA-CORE-2019-006.
+- Update Panopoly Widgets for Issue #3048952: Security update for TableField
+  module (tablefield-7.x-3.4).
+- Start testing upgrades from the 1.65 release.
+- Restored drupal-org.make after the 1.65 release.
+
+7.x-1.65, 2019-03-27
+-------------------
+- Update Panopoly Admin for Issue #3043878 by byronveale: Security update,
+  module_filter-7.x-2.2.
+- Start testing upgrades from the 1.64 release.
+- Restored drupal-org.make after the 1.64 release.
+
+7.x-1.64, 2019-03-20
+-------------------
+- Update to Drupal 7.65 for SA-CORE-2019-004.
+- Start testing upgrades from the 1.63 release.
+- Restored drupal-org.make after the 1.63 release.
+
+7.x-1.63, 2019-03-14
+-------------------
+- Update Panopoly Core for Issue #3039961 by cboyden, bkosborne: Update to Views
+  3.21.
+- Start testing upgrades from the 1.62 release.
+- Restored drupal-org.make after the 1.62 release.
+
+7.x-1.62, 2019-02-21
+-------------------
+- Update Panopoly Core for Issue #3034517 by byronveale: Update to link-7.x-1.6.
+- Start testing upgrades from the 1.61 release.
+- Restored drupal-org.make after the 1.61 release.
+
+7.x-1.61, 2019-02-13
+-------------------
+- Start testing upgrades from latest versions, and drop those over a year old.
+- Update to Drupal 7.64.
+- Update Panopoly Admin and Core for Issue #3021508 by byronveale, dsnopek:
+  Update Administration Menu to admin_menu-7.x-3.0-rc6.
+- Update Panopoly Magic for Issue #2611876 by cboyden, dsnopek, mpotter: Add
+  descriptions to Single Preview mode in Panopoly Magic.
+- Update Panopoly Widgets for Issue #3027578 by wylbur, dsnopek: PHP Errors are
+  generated when deleted FPP objects do not exist.
+- Update Panopoly Core for Issue #2984994 by byronveale, dsnopek: Upgrade Link
+  module to 1.5.
+- Update Panopoly Widgets for Issue #3021518 by byronveale: Update TableField to
+  tablefield-7.x-3.2.
+- Update Panopoly Widgets for Issue #3021497 by byronveale: Update Menu Block to
+  menu_block-7.x-2.8.
+- Update Panopoly Widgets for Issue #2984990 by byronveale: Upgrade File Entity
+  (file_entity) to 7.x-2.25.
+- Update Panopoly Core for Issue #3021551 by byronveale: Update Features to
+  features-7.x-2.11.
+- Restored drupal-org.make after the 1.60 release.
+
+7.x-1.60, 2019-01-23
+-------------------
+- Update Panopoly Core for Issue #3027936: Update panels_breadcrumbs for SA-
+  CONTRIB-2019-004.
+- Restored drupal-org.make after the 1.59 release.
+
+7.x-1.59, 2019-01-17
+-------------------
+- Update to Drupal 7.63.
+- Start testing upgrades from the 1.58 release.
+- Restored drupal-org.make after the 1.58 release.
+
+7.x-1.58, 2018-12-11
+-------------------
+- Update Panopoly Core for Issue #2948466 by bkosborne: Patch defaultcontent
+  module to remove PHP7 deprecation warning.
+- Update Panopoly Core and Magic for Issue #2968560 by dsnopek, cboyden: Allow
+  overriding "more" text on Views-based widgets.
+- Update Panopoly Widgets for Issue #2995003 by dsnopek, cboyden: File entity
+  overwriting slide title on spotlight widgets.
+- Update Panopoly Magic for Issue #2982707 by dsnopek, cboyden: Swap order of
+  "Save" and "Update Preview" buttons when in manual preview mode.
+- Update Panopoly Widgets for Issue #2973185 by dsnopek, cboyden: Normalize
+  "Slide duration" for Spotlight widgets.
+- Update Drupal to 7.61.
+- Update Panopoly Search for Issue #3011888 by dsnopek: Update search_api to
+  1.25 and search_api_db to 1.7.
+- Update Panopoly Widgets for Issue #3011887 by dsnopek: Update Media to 2.21.
+- Update Panopoly Widgets for Issue #3011886 by dsnopek: Update file_entity to
+  2.22.
+- Update Panopoly Core for Issue #3011889 by dsnopek: Update uuid module to 1.2.
+- Update Panopoly Core for Issue #2948753 by bkosborne, cboyden: Patch panels
+  breadcrumb module to remove deprecation notice in PHP 7.2.
+- Update Panopoly Core for Issue #2948768 by bkosborne, Jorrit, RobLoach:
+  Patch/update views bulk operations to remove deprecation warnings in PHP 7.2.
+- Update Panopoly Core for Issue #2948717 by bkosborne, berliner: Patch features
+  to remove deprecation warning in PHP 7.2.
+- Update Panopoly Core for Issue #2948744 by bkosborne, cboyden, byronveale:
+  Upgrade & patch migrate module to make it compatible with PHP 7.
+- Update Panopoly Core for Issue #3002885 by cboyden: Patch Views for PHP 7.1
+  issue.
+- Update Panopoly Admin for Issue #2948454 by bkosborne: Patch admin_menu to
+  remove PHP 7 deprecation warning.
+- Update Panopoly Core for Issue #2948456 by bkosborne, cboyden: Patch apps to
+  remove PHP 7 deprecation warning.
+- Update Panopoly Core for Issue #2948452 by bkosborne, cboyden: Update
+  libraries module to resolve deprecation warning for PHP 7.
+- Update Panopoly Core for Issue #2853699 by DamienMcKenna, torotil, jelo,
+  Asacolips, z.stolar: Out-of-date dependency processing in panopoly_core.
+- Add test job for PHP 7.2, which is (currently) allowed to fail.
+- Drop support for updating from Panopoly version that were release more than a
+  year ago.
+- Start testing upgrades from the 1.57 release.
+- Restored drupal-org.make after the 1.57 release.
+
+7.x-1.57, 2018-10-18
+-------------------
+- Update to Drupal 7.60 for SA-CORE-2018-006.
+- Start testing upgrades from the 1.55 and 1.56 releases.
+- Restored drupal-org.make after the 1.56 release.
+
+7.x-1.56, 2018-10-10
+-------------------
+- Update Panopoly Search for Issue #3005752 by dsnopek: Update to
+  search_api_solr 1.14 for SA-CONTRIB-2018-065.
+- Update Panopoly Magic for Issue #2995697 by cboyden, dsnopek: PHP notices when
+  previewing widgets.
+- Restored drupal-org.make after the 1.55 release.
+
+7.x-1.55, 2018-07-04
+-------------------
+- Update Panopoly Core for Issue #2597275 by dsnopek, humansky, skwashd,
+  mpotter, bkosborne, byronveale, Jorrit: Update UUID to version 1.1.
+- Update Panopoly Magic for Issue #2975454 by dsnopek, cboyden: Improve
+  accessibility of the 'Single' and 'Manual' preview modes.
+- Update Panopoly Magic for Issue #2981684 by cboyden: Add alt text for custom
+  preview images.
+- Start testing upgrades from the 1.54 release.
+- Restored drupal-org.make after the 1.54 release.
+
+7.x-1.54, 2018-05-10
+-------------------
+- Update Panopoly Test for Issue #2971200 by dsnopek, cboyden: Fix issues with
+  waiting for AJAX in an iframe (Behat).
+- Update Panopoly Core for Issue #2541570 by dsnopek, gdaw, humansky,
+  byronveale, bkosborne: Date popup hover issue.
+- Update Panopoly Admin for Issue #2936050 by byronveale, dsnopek, bkosborne:
+  Update Breakpoints module to 7.x-1.6.
+- Update Panopoly WYSIWYG for Issue #2933585 by dsnopek, cboyden: Update
+  caption_filter to version 1.3.
+- Update Panopoly Core for Issue #2971194 by dsnopek, byronveale: Update Views
+  to version 3.20.
+- Update Panopoly WYSIWYG for Issue #2933585 by dsnopek: Update caption_filter
+  to version 1.3.
+- Update Panopoly Admin for Issue #2936050 by byronveale, bkosborne: Update
+  Breakpoints module to 7.x-1.4.
+- Drop support for updating from Panopoly version that were release more than a
+  year ago.
+- Update Panopoly Core for Issue #2971189 by dsnopek: Update to migrate 2.9.
+- Update Panopoly Admin for Issue #2937146 by byronveale, bkosborne: Update
+  Module Filter to 7.x-2.1.
+- Update Panopoly Admin for Issue #2936259 by byronveale, bkosborne: Update Date
+  Popup Authored module to 7.x-1.2.
+- Update Panopoly Core for Issue #2936030 by byronveale, bkosborne: Update Apps
+  module to 7.x-1.1.
+- Update Panopoly WYSIWYG for Issue #2971198 by dsnopek: Update WYSIWYG to 2.5.
+- Update Panopoly Core for Issue #2971188 by dsnopek: Update devel to version
+  1.6.
+- Update Panopoly Search for Issue #2933584 by dsnopek, bkosborne: Update
+  search_api to version 1.24.
+- Update Panopoly Core for Issue #2933580 by dsnopek, bkosborne: Update
+  field_group to version 1.6.
+- Update Panopoly WYSIWYG for Issue #2882771 by cboyden, byronveale, dsnopek,
+  bkosborne: Update WYSIWYG Filter to 7.x-1.6-rc9.
+- Update Panopoly Widgets for Issue #2931757 by byronveale, joseph.olstad,
+  dsnopek, bkosborne: upgrade media and media_youtube in panopoly_widgets.
+- Update Panopoly WYSIWYG for Issue #2561731 by dsnopek, wylbur, bkosborne:
+  Update to image_resize_filter 1.16.
+- Update Panopoly Images for Issue #2933583 by dsnopek, byronveale: Update
+  manualcrop to version 1.7.
+- Update Panopoly Core for Issue #2933581 by dsnopek, bkosborne: Update
+  libraries to version 2.3.
+- Update Panopoly Core for Issue #2933578 by dsnopek, bkosborne: Update date to
+  version 2.10.
+- Update Panopoly Core for Issue #2933577 by dsnopek: Update
+  views_bulk_operations to version 3.4.
+- Update Panopoly Magic and Test for Issue #2954647 by dsnopek: Linkit and live
+  preview with panes style tests failing on Travis.
+- Update Panopoly Test for Issue #2969375 by dsnopek: Declare $javascript
+  property in panopoly_test.behat.inc.
+- Update to Drupal core 7.59 and Media for SA-CORE-2018-004.
+- Update Panopoly Widgets for Issue #2952671 by dsnopek, cboyden: File and Image
+  widgets show PHP notices when underlying file has been deleted.
+- Update Panopoly Widgets and Test for Issue #2505357 by cboyden, dsnopek:
+  Widgets can be saved without any content.
+- Merge tag '7.x-1.52' into 7.x-1.x.
+- Update to Drupal 7.58 for SA-CORE-2018-002.
+- Update Panopoly WYSIWYG for Issue #2955645 by dsnopek: "Full screen" button in
+  WYSIWYG blanks out content.
+- Update Panopoly Widgets for Issue #2903251 by dsnopek, byronveale, cboyden,
+  bkosborne: Update and patch Simple GMAP.
+- Update Panopoly Widgets and Test for Issue #2919401 by cboyden, byronveale,
+  dsnopek, bkosborne: Update TableField to 7.x-3.1.
+- Try only verifying .make files when not doing an upgrade test.
+- Update Panopoly Core for Issue #2945430 by byronveale, cboyden, bkosborne:
+  Update to ctools 7.x-1.14.
+- Update Panopoly Core for Issue #2933582 by dsnopek, bkosborne, cboyden: Update
+  views to version 3.18 (add Views patch).
+- Update Panopoly Core for Issue #2933582 by dsnopek, bkosborne: Update views to
+  version 3.18.
+- Start testing upgrades from the 1.51 release.
+- Restored drupal-org.make after the 1.51 release.
+
 7.x-1.51, 2018-02-22
 -------------------
 - Restored drupal-org.make after the 1.50 release.
